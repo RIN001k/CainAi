@@ -1,0 +1,23 @@
+.links a:hover {
+    color: green;
+    text-shadow: 0 0 10px green, 0 0 20px green, 0 0 30px green;
+}
+.links a {
+    position: relative;
+    text-decoration: none;
+}
+
+.links a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: green;
+    transition: width 0.3s;
+}
+
+.links a:hover:after {
+    width: 100%;
+}
