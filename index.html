@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber-Style Website with Fuzzy Effect</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        /* Reset styles */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url("backgraund.jpg"); 
+            background-size: cover;
+            font-family: 'Orbitron', Arial, sans-serif;
+            color: green;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Main content links */
+        .links a {
+            color: #000000; /* Bright green */
+            text-decoration: none;
+            font-size: 24px;
+            margin: 10px;
+            display: block;
+            font-weight: 700;
+            transition: color 0.3s ease;
+            text-shadow:
+                -1px -1px 0 #162b1d,
+                1px -1px 0 #162b1d,
+                -1px 1px 0 #162b1d,
+                1px 1px 0 #162b1d; /* Black border around text */
+        }
+
+        .links a:hover {
+            color: #00e600; /* Slightly brighter green on hover */
+        }
+
+        /* Fuzzy overlay effect */
+        .fuzzy-overlay {
+            position: absolute;
+            inset: -200%;
+            background-image: url("backgraund.jpg");
+            opacity: 0.15; /* Slightly transparent noise */
+            z-index: 0;
+            pointer-events: none;
+            animation: shift 0.2s linear infinite both;
+        }
+
+        @keyframes shift {
+            0% {
+                transform: translateX(10%) translateY(10%);
+            }
+
+            100% {
+                transform: translateX(-10%) translateY(-10%);
+            }
+        }
+
+        /* Main content wrapper */
+        .container {
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        /* Content area */
+        .content {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            z-index: 5;
+            position: relative;
+        }
+
+        /* Optional: TV scanlines */
+        .tv-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.3) 4px,
+                rgba(255, 255, 255, 0.1) 8px
+            );
+            z-index: 1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Scanlines and fuzzy noise -->
+        <div class="tv-effect"></div>
+        <div class="fuzzy-overlay"></div>
+
+        <!-- Main content -->
+        <div class="content">
+            <div class="links">
+                <a href="https://pump.fun/board" target="_blank">Buy Cain coins</a>
+                <a href="https://t.me/cain_meme" target="_blank">Chat with Cain</a>
+                <a href="https://x.com/Cain_The_AI" target="_blank">Twitter</a>
+                <a href="https://www.tiktok.com/@ai_cain?_t=ZN-8rwrivCBzt8&_r=1" target="_blank">Tik Tok</a>
+                <a href="https://en.wikipedia.org/wiki/Cain" target="_blank">History</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fuzzy Overlay</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+   
+        .container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 96px;
+        }
+
+        .content {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+
+            z-index: 5;
+            position: relative;
+        }
+
+        .fuzzy-overlay {
+            position: absolute;
+            inset: -200%;
+            background-image: url("tv.jpg");
+            opacity: 25%;
+            z-index: 0;
+            /* pointer-events: none; */
+
+            animation: shift 0.2s linear infinite both;
+        }
+
+        @keyframes shift {
+            0% {
+                transform: translateX(10%) translateY(10%);
+            }
+
+            100% {
+                transform: translateX(-10%) translateY(-10%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h2 class="title">📺</h2>
+        </div>
+        <div class="fuzzy-overlay"></div>
+    </div>
+</body>
+
+</html>
